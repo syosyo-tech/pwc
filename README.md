@@ -10,12 +10,38 @@
 
 ## 必要環境
 
-- Go
 - macOS
 
 `pwc` は `pbcopy` を使うため、現在は macOS 向けです。
 
 ## インストール
+
+Go 環境がない場合でも、同梱のビルド済みバイナリを使ってインストールできます。
+
+```bash
+./install.sh
+```
+
+デフォルトでは、書き込み可能な場合は `/usr/local/bin/pwc`、そうでない場合は `~/.local/bin/pwc` にインストールします。
+インストール先を指定する場合:
+
+```bash
+INSTALL_DIR="$HOME/bin" ./install.sh
+```
+
+## アンインストール
+
+```bash
+./uninstall.sh
+```
+
+インストール先を指定していた場合:
+
+```bash
+INSTALL_DIR="$HOME/bin" ./uninstall.sh
+```
+
+ソースからインストールする場合:
 
 ```bash
 go install github.com/syosyo-tech/pwc@latest
