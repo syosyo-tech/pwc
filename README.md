@@ -55,3 +55,7 @@ go test ./...
 ```bash
 go run .
 ```
+
+## ライセンス
+
+MIT License
